@@ -1,11 +1,14 @@
 platform: linux
 run:
-  path: tasks/scripts/console-print.sh
+  path: tasks/scripts/parseBom.py
   dir:  tanzu-rel-repo
 inputs:
 - name: tanzu-rel-repo
 params:
   concourse_coordinates: ((concourse_coordinates))
+outputs:
+  - name: bom-version
+  - dir: /var/bom-version
 image_resource:
   type: docker-image
   source:

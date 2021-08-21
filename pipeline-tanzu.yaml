@@ -11,10 +11,18 @@ jobs:
   plan: 
   - get: tanzu-rel-repo
     trigger: true
-    
+  - task: parse-bom
+    vars:
+      docker_user_name: ((docker_user_name))
+      docker_password: ((docker_password))
+    file: tanzu-rel-repo/tasks/parseBom.yaml
+
+
   - task: update-runner-pipeline
     vars:
       concourse_coordinates: "http://192.168.1.6:8080"
+      docker_user_name: ((docker_user_name))
+      docker_password: ((docker_password))
     file: tanzu-rel-repo/tasks/registerTask.yaml
     
 

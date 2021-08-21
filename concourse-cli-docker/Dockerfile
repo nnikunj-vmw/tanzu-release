@@ -5,7 +5,8 @@ RUN tdnf install -y build-essential python3-setuptools python3-tools python3-pip
 ENV LANG=en_US.UTF8
 ENV LC_CTYPE=en_US.UTF-8
 ENV LC_COLLATE=POSIX
-
+RUN mkdir /var/bom-version
+RUN chmod 700 /var/bom-version
 COPY fly /usr/local/bin/
 RUN chmod 700  /usr/local/bin/fly
 #ENTRYPOINT [ "/bin/bash" ]

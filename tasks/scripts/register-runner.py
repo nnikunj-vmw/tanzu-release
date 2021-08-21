@@ -7,10 +7,10 @@ import subprocess
 
 
 args = sys.argv[1:]
-bomFile = args[1]
-concourse_coordinates = args[2]
-concourse_user = args[3]
-concourse_password = args[4]
+bomFile = args[0]
+concourse_coordinates = args[1]
+concourse_user = args[2]
+concourse_password = args[3]
 print("Expcting Bom file at: "+str(bomFile))
 
 rel_bom = open(bomFile)
