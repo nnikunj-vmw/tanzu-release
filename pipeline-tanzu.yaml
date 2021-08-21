@@ -15,20 +15,14 @@ jobs:
     vars:
       docker_user_name: ((docker_user_name))
       docker_password: ((docker_password))
-    outputs:
-      - name: bom-version
     file: tanzu-rel-repo/tasks/parseBom.yaml
 
 
   - task: update-runner-pipeline
-    get: bom-version
     vars:
       concourse_coordinates: "http://192.168.1.6:8080"
       docker_user_name: ((docker_user_name))
       docker_password: ((docker_password))
-    inputs:
-      - name: bom-version
-      - name: tanzu-rel-repo
     file: tanzu-rel-repo/tasks/registerTask.yaml
     
 
