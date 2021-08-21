@@ -3,8 +3,8 @@ run:
   path: tasks/scripts/console-print.sh
   dir:  tanzu-rel-repo
 inputs:
-- name: tanzu-rel-repo
 - name: bom-version
+- name: tanzu-rel-repo
 params:
   concourse_coordinates: ((concourse_coordinates))
 image_resource:
