@@ -1,5 +1,5 @@
 #!/bin/bash
 
-docker build . -t nilabhnikunj/nilabhnikunj/concourse-cli:1.0
+docker build . -t nilabhnikunj/concourse-cli:latest
 
-docker push nilabhnikunj/concourse-cli:1.0
+docker push nilabhnikunj/concourse-cli:latest
