@@ -3,6 +3,7 @@
 import os
 import sys
 import json
+import shutil
 
 
 rel_bom = open("bom/rel.json")
@@ -15,6 +16,18 @@ if not isExist:
 f = open("./bom-version/version", "w+")
 f.write(parsed_bom_file.get('release-bom').get('current-rel'))
 f.close()
+src = "tasks"
+try:
+    shutil.copytree(src, "bom-version")
+except OSError as err:
+ 
+    # error caused if the source was not a directory
+    if err.errno == errno.ENOTDIR:
+        shutil.copy2(src, dest)
+    else:
+        print("Error: % s" % err)
+
+
 
 
 
