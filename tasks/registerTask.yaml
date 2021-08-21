@@ -6,8 +6,6 @@ inputs:
 - name: tanzu-release
 params:
   concourse_coordinates: ((concourse_coordinates))
-  #BRANCH_NAME: ((concourse.harbor-access-token))
-  #BUILD: ((concourse.cloudgate_id))
 image_resource:
   type: docker-image
   source:
