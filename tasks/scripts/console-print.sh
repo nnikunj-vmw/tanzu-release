@@ -12,6 +12,5 @@ echo "ls -lrt bom-version"
 ls -lrt $workdir/../bom-version
 echo "workdir/../bom-version/version"
 cat  $workdir/../bom-version/version
-export branch = $workdir/../bom-version/branch
 echo "Branch:"
-cat $branch
+cat $workdir/../bom-version/branch
