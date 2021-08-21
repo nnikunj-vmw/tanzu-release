@@ -1,0 +1,17 @@
+platform: linux
+run:
+  path: tasks/register-runner.py
+  dir:  tanzu-release
+inputs:
+- name: tanzu-release
+params:
+  concourse_coordinates: ((concourse_coordinates))
+  #BRANCH_NAME: ((concourse.harbor-access-token))
+  #BUILD: ((concourse.cloudgate_id))
+image_resource:
+  type: docker-image
+  source:
+    username: irisdev21
+    password: 4d96b731-f976-4283-a956-20a58a171601
+    repository: nilabhnikunj/concourse-cli
+    tag: 1.0
