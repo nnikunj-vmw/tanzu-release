@@ -8,7 +8,6 @@ params:
   concourse_coordinates: ((concourse_coordinates))
 outputs:
   - name: bom-version
-  - dir: /var/bom-version
 image_resource:
   type: docker-image
   source:
