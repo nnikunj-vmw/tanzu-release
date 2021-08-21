@@ -1,6 +1,6 @@
 platform: linux
 run:
-  path: tasks/register-runner.py
+  path: tasks/scripts/console-print.sh
   dir:  tanzu-release
 inputs:
 - name: tanzu-release
