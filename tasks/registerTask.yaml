@@ -12,4 +12,4 @@ image_resource:
     username: irisdev21
     password: 4d96b731-f976-4283-a956-20a58a171601
     repository: nilabhnikunj/concourse-cli
-    tag: 1.0
+    tag: latest
