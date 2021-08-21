@@ -7,7 +7,7 @@ import json
 
 rel_bom = open("bom/rel.json")
 parsed_bom_file = json.load(rel_bom)
-f = open("bom-version/version", "w")
+f = open("bom-version/version", "w+")
 f.write(parsed_bom_file.get('release-bom').get('current-rel'))
 f.close()
 
