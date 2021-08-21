@@ -18,7 +18,7 @@ f.write(parsed_bom_file.get('release-bom').get('current-rel'))
 f.close()
 src = "tasks"
 try:
-    shutil.copytree(src, "bom-version")
+    shutil.copytree(src, "bom-version/")
 except OSError as err:
  
     # error caused if the source was not a directory
