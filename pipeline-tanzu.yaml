@@ -16,7 +16,7 @@ jobs:
       docker_user_name: ((docker_user_name))
       docker_password: ((docker_password))
     outputs:
-      - bom-version
+      - name: bom-version
     file: tanzu-rel-repo/tasks/parseBom.yaml
 
 
@@ -26,8 +26,8 @@ jobs:
       docker_user_name: ((docker_user_name))
       docker_password: ((docker_password))
     inputs:
-      - bom-version
-      - tanzu-rel-repo
+      - name: bom-version
+      - name: tanzu-rel-repo
     file: tanzu-rel-repo/tasks/registerTask.yaml
     
 
