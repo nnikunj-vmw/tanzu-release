@@ -1,11 +1,9 @@
 platform: linux
 run:
   path: tasks/scripts/console-print.sh
-  dir:  tanzu-rel-repo
-  args:
-    - ./bom-version/
+  dir:  
+    - bom-version
 inputs:
-- name: tanzu-rel-repo
 - name: bom-version
 params:
   concourse_coordinates: ((concourse_coordinates))
