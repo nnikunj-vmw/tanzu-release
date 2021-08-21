@@ -8,6 +8,6 @@ ENV LC_COLLATE=POSIX
 
 COPY fly /usr/local/bin/
 RUN chmod 700  /usr/local/bin/fly
-ENTRYPOINT [ "/bin/bash" ]
+#ENTRYPOINT [ "/bin/bash" ]
 
 
