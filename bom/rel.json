@@ -1,6 +1,7 @@
 {
   "release-bom": {
     "previous-rel": "v1.3.0",
-    "current-rel": "v1.3.1"
+    "current-rel": "v1.3.1",
+    "branch" : "v1.3.1"
   }
 }
