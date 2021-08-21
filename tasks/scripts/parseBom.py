@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 import os
+import subprocess
 import sys
 import json
 import shutil
@@ -9,12 +10,12 @@ import shutil
 rel_bom = open("bom/rel.json")
 parsed_bom_file = json.load(rel_bom)
 print (parsed_bom_file.get('release-bom').get('current-rel'))
-cwd = os.getcwd()
-print("Current dir listing")
-os.listdir(cwd)
-print("parent dir listing")
-os.listdir(os.pardir)
+print("ZZZZZZZZZZ")
+print (subprocess.Popen("ls -lrt $(pwd)", shell=True, stdout=subprocess.PIPE).stdout.read())
+print("ZZZZZZZZZZ")
+print (subprocess.Popen("ls -lrt $(pwd)/..", shell=True, stdout=subprocess.PIPE).stdout.read())
 
+print("ZZZZZZZZZZ")
 isExist = os.path.exists("./bom-version")
 if not isExist:
     os.makedirs("./bom-version")
