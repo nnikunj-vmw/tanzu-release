@@ -4,6 +4,7 @@ run:
   dir:  tanzu-rel-repo
 inputs:
 - name: tanzu-rel-repo
+- name: bom-version
 params:
   concourse_coordinates: ((concourse_coordinates))
 image_resource:
