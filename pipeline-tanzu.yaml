@@ -15,6 +15,8 @@ jobs:
     vars:
       docker_user_name: ((docker_user_name))
       docker_password: ((docker_password))
+    outputs:
+      - bom-version
     file: tanzu-rel-repo/tasks/parseBom.yaml
 
 
@@ -23,6 +25,9 @@ jobs:
       concourse_coordinates: "http://192.168.1.6:8080"
       docker_user_name: ((docker_user_name))
       docker_password: ((docker_password))
+    inputs:
+      - bom-version
+      - tanzu-rel-repo
     file: tanzu-rel-repo/tasks/registerTask.yaml
     
 
