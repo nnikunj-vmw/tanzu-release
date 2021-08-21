@@ -16,24 +16,7 @@ if not isExist:
 f = open("./bom-version/version", "w+")
 f.write(parsed_bom_file.get('release-bom').get('current-rel'))
 f.close()
-src = "tasks"
-
-try:
-    shutil.copyfile("tasks/registerTask.yaml", "bom-version/registerTask.yaml")
-    shutil.copyfile("tasks/scripts/console-print.sh", "bom-version/console-print.sh")
-    
-except OSError as err:
  
-    # error caused if the source was not a directory
-    if err.errno == errno.ENOTDIR:
-        shutil.copy2(src, dest)
-    else:
-        print("Error: % s" % err)
-
-
-
-
-
 print ("content of file written:\n")
 f = open("bom-version/version", "r")
 print(f.read())
