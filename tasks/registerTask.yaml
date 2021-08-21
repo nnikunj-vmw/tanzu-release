@@ -1,6 +1,6 @@
 platform: linux
 run:
-  path: bom-version/pipeline-artefacts/tasks/scripts/console-print.sh
+  path: bom-version/console-print.sh
   dir:  bom-version
 inputs:
 - name: bom-version
