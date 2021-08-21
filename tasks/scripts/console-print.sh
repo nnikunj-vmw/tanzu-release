@@ -1,5 +1,7 @@
 #!/bin/bash
 echo "Within script"
 echo ${concourse_coordinates}
+
+echo $1
 echo "Trying to print content"
-cat ./bom-version/version
+cat $1/version

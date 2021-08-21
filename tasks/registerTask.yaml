@@ -2,6 +2,8 @@ platform: linux
 run:
   path: tasks/scripts/console-print.sh
   dir:  tanzu-rel-repo
+  args:
+    - ./bom-version/
 inputs:
 - name: tanzu-rel-repo
 - name: bom-version
