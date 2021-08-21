@@ -21,6 +21,7 @@ jobs:
 
 
   - task: update-runner-pipeline
+    get: bom-version
     vars:
       concourse_coordinates: "http://192.168.1.6:8080"
       docker_user_name: ((docker_user_name))
