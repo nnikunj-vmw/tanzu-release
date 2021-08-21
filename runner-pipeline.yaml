@@ -4,9 +4,9 @@ resources:
   source:
     uri: git@github.com:nnikunj-vmw/tanzu-release.git
     private_key:  ((git-private-key))
-    branch: main
+    branch: ((branch))
   check_every: 1m
-jobs:
+
 - name: release-notification-pipeline
   plan: 
   - get: tanzu-rel-repo
@@ -16,16 +16,3 @@ jobs:
       docker_user_name: ((docker_user_name))
       docker_password: ((docker_password))
     file: tanzu-rel-repo/tasks/parseBom.yaml
-
-
-  - task: update-runner-pipeline
-    vars:
-      concourse_coordinates: "http://192.168.1.6:8080"
-      concourse_user: "admin",
-      concourse_password: "admin",
-      docker_user_name: ((docker_user_name))
-      docker_password: ((docker_password))
-    file: tanzu-rel-repo/tasks/registerTask.yaml
-    
-
-      
