@@ -1,6 +1,6 @@
 platform: linux
 run:
-  path: tasks/scripts/console-print.sh
+  path: tasks/scripts/update-runner-pipeline.sh
   dir:  tanzu-rel-repo
 inputs:
 - name: bom-version
