@@ -6,7 +6,7 @@ resources:
     private_key:  ((git_private_key))
     branch: ((branch))
   check_every: 1m
-
+jobs:
 - name: lcm
   plan: 
   - get: tanzu-rel-repo
