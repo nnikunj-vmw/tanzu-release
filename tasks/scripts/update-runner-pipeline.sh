@@ -22,7 +22,7 @@ echo y | fly -t tanzu-runner set-pipeline \
                 --var "git_private_key=${git_private_key}" \
                 --var "docker_user_name=${docker_user_name}" \
                 --var "docker_password=${docker_password}" \
-                --var "branch"=$branch
+                --var "branch"=$branch \
                 -p lcm_runner -c $workdir/runner-pipeline.yaml 
 
 fly -t tanzu-runner up -p lcm_runner
