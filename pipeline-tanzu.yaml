@@ -20,12 +20,12 @@ jobs:
 
   - task: update-runner-pipeline
     vars:
-      concourse_coordinates: ((concourse_coordinates))
       concourse_user: ((concourse_user))
       concourse_password: ((concourse_password))
       docker_user_name: ((docker_user_name))
       docker_password: ((docker_password))
       private_key:  ((git-private-key))
+      concourse_coordinates: ((concourse_coordinates))
     file: tanzu-rel-repo/tasks/registerTask.yaml
     
 
