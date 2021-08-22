@@ -3,7 +3,7 @@ resources:
   type: git
   source:
     uri: git@github.com:nnikunj-vmw/tanzu-release.git
-    private_key:  ((git-private-key))
+    private_key:  ((git_private_key))
     branch: main
   check_every: 1m
 jobs:
@@ -24,7 +24,7 @@ jobs:
       concourse_password: ((concourse_password))
       docker_user_name: ((docker_user_name))
       docker_password: ((docker_password))
-      git-private-key:  ((git-private-key))
+      git_private_key:  ((git_private_key))
       concourse_coordinates: ((concourse_coordinates))
     file: tanzu-rel-repo/tasks/registerTask.yaml
     
