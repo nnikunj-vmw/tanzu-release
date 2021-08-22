@@ -11,7 +11,7 @@ params:
   concourse_password: ((concourse_password))
   docker_user_name: ((docker_user_name))
   docker_password: ((docker_password))
-  private_key:  ((git-private-key))
+  git-private-key:  ((git-private-key))
 image_resource:
   type: docker-image
   source:

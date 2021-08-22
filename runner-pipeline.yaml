@@ -15,5 +15,5 @@ resources:
     vars:
       docker_user_name: ((docker_user_name))
       docker_password: ((docker_password))
-      private_key:  ((git-private-key))
+      git-private-key:  ((git-private-key))
     file: tanzu-rel-repo/tasks/parseBom.yaml
