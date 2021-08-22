@@ -20,12 +20,12 @@ jobs:
 
   - task: update-runner-pipeline
     vars:
-      - concourse_coordinates: "http://192.168.1.6:8080"
-      - concourse_user: "admin"
-      - concourse_password: "admin"
-      - docker_user_name: ((docker_user_name))
-      - docker_password: ((docker_password))
-      - private_key:  ((git-private-key))
+      concourse_coordinates: ((concourse_coordinates))
+      concourse_user: ((concourse_user))
+      concourse_password: ((concourse_password))
+      docker_user_name: ((docker_user_name))
+      docker_password: ((docker_password))
+      private_key:  ((git-private-key))
     file: tanzu-rel-repo/tasks/registerTask.yaml
     
 
