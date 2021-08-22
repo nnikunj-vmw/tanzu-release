@@ -7,6 +7,11 @@ inputs:
 - name: tanzu-rel-repo
 params:
   concourse_coordinates: ((concourse_coordinates))
+  concourse_user: ((concourse_user))
+  concourse_password: ((concourse_password))
+  docker_user_name: ((docker_user_name))
+  docker_password: ((docker_password))
+  private_key:  ((git-private-key))
 image_resource:
   type: docker-image
   source:
