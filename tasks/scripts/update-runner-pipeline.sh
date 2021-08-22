@@ -1,15 +1,21 @@
 #!/bin/bash
-
+echo "{concourse_coordinates}"
 echo ${concourse_coordinates}
+echo "{concourse_user}"
 echo ${concourse_user}
+echo "{concourse_password}"
 echo ${concourse_password}
+echo "{docker_user_name}"
 echo ${docker_user_name}
+echo "{docker_password}"
 echo ${docker_password}
+echo "{private_key}"
 echo ${private_key}
 export workdir=$(pwd)
 echo "Current working dir: "$workdir
 branch=`cat $workdir/../bom-version/branch`
 echo "Obtained branch: "$branch
+#fly --target=tanzu-runner login --concourse-url=http://192.168.1.6:8080/  --username=admin --password=admin
 fly --target=tanzu-runner login --concourse-url=${concourse_coordinates} --username=${concourse_user} --password=${concourse_password}
 fly --target=tanzu-runner sync
 echo y | fly -t tanzu-runner set-pipeline \
