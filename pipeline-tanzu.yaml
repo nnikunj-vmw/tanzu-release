@@ -26,6 +26,7 @@ jobs:
       docker_password: ((docker_password))
       private_key:  ((git-private-key))
       concourse_coordinates: ((concourse_coordinates))
+      private_key:  ((git-private-key))
     file: tanzu-rel-repo/tasks/registerTask.yaml
     
 
