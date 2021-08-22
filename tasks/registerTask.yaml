@@ -1,12 +1,17 @@
 platform: linux
 run:
-  path: tasks/scripts/console-print.sh
+  path: tasks/scripts/update-runner-pipeline.sh
   dir:  tanzu-rel-repo
 inputs:
 - name: bom-version
 - name: tanzu-rel-repo
 params:
   concourse_coordinates: ((concourse_coordinates))
+  concourse_user: ((concourse_user))
+  concourse_password: ((concourse_password))
+  docker_user_name: ((docker_user_name))
+  docker_password: ((docker_password))
+  git_private_key:  ((git_private_key))
 image_resource:
   type: docker-image
   source:

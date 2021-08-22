@@ -3,7 +3,7 @@ resources:
   type: git
   source:
     uri: git@github.com:nnikunj-vmw/tanzu-release.git
-    private_key:  ((git-private-key))
+    private_key:  ((git_private_key))
     branch: main
   check_every: 1m
 jobs:
@@ -20,11 +20,12 @@ jobs:
 
   - task: update-runner-pipeline
     vars:
-      concourse_coordinates: "http://192.168.1.6:8080"
-      concourse_user: "admin",
-      concourse_password: "admin",
+      concourse_user: ((concourse_user))
+      concourse_password: ((concourse_password))
       docker_user_name: ((docker_user_name))
       docker_password: ((docker_password))
+      git_private_key:  ((git_private_key))
+      concourse_coordinates: ((concourse_coordinates))
     file: tanzu-rel-repo/tasks/registerTask.yaml
     
 
