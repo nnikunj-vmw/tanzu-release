@@ -7,7 +7,7 @@ resources:
     branch: ((branch))
   check_every: 1m
 jobs:
-- name: release-notification-pipeline
+- name: lcm
   plan: 
   - get: tanzu-rel-repo
     trigger: true
@@ -16,4 +16,3 @@ jobs:
       docker_user_name: ((docker_user_name))
       docker_password: ((docker_password))
     file: tanzu-rel-repo/tasks/parseBom.yaml
-    
